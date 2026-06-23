@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Tournoi de fléchettes</title>
+<style>
+  :root { --bg:#121212; --card:#1c1c1e; --fg:#ececec; --muted:#9a9a9a; --accent:#FF6D00; --border:#2c2c2e; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; }
+  .wrap { max-width:760px; margin:0 auto; padding:24px 20px 64px; }
+  header { border-bottom:3px solid var(--accent); padding-bottom:16px; margin-bottom:8px; }
+  h1 { font-size:1.6rem; margin:.2em 0; }
+  h2 { font-size:1.15rem; margin-top:2em; color:var(--accent); }
+  .updated { color:var(--muted); font-size:.9rem; }
+  table { width:100%; border-collapse:collapse; margin:1em 0; font-size:.95rem; }
+  th,td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:var(--card); }
+  a { color:var(--accent); }
+  code { background:var(--card); padding:1px 5px; border-radius:4px; font-size:.9em; }
+  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--border); color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Politique de confidentialité — Tournoi de fléchettes</h1>
+  <p class="updated">Dernière mise à jour : 10/06/2026</p>
+</header>
+
+<h2>1. Responsable du traitement</h2>
+<p>L'application <strong>« Tournoi de fléchettes »</strong> (package <code>com.alainfr.tournoiflechettes</code>)
+est éditée par <strong>Alain Bonnefond</strong>, agissant en tant que responsable du traitement au sens du RGPD.</p>
+<p>Contact : <a href="mailto:alain.bonnefond03@orange.fr">alain.bonnefond03@orange.fr</a></p>
+
+<h2>2. Données que nous traitons</h2>
+<table>
+  <thead><tr><th>Donnée</th><th>Origine</th><th>Finalité</th></tr></thead>
+  <tbody>
+    <tr><td>Identifiant de compte (UID), adresse e-mail, nom d'affichage</td><td>Connexion Google ou Sign in with Apple</td><td>Créer et sécuriser votre compte, isoler vos données</td></tr>
+    <tr><td>Joueurs, équipes, tournois, parties, scores et statistiques</td><td>Saisis par vous dans l'app</td><td>Fournir les fonctionnalités de comptage et de tournoi</td></tr>
+    <tr><td>Statut d'achat / d'abonnement (<em>entitlement</em>)</td><td>Stores (Google Play / App Store) via RevenueCat</td><td>Débloquer les fonctionnalités payantes</td></tr>
+    <tr><td>Données de diagnostic de plantage (modèle d'appareil, version OS, pile d'appels)</td><td>Firebase Crashlytics (builds <em>release</em> uniquement)</td><td>Détecter et corriger les bugs</td></tr>
+  </tbody>
+</table>
+<p>Nous <strong>ne traitons aucune donnée bancaire</strong> : les paiements sont gérés par Google Play
+et l'App Store. Nous ne diffusons <strong>pas de publicité</strong> et <strong>ne vendons jamais</strong> vos données.</p>
+
+<h2>3. Hébergement et localisation</h2>
+<p>Vos données sont stockées dans <strong>Google Cloud Firestore</strong>, région <strong>europe-west9
+(Paris, France)</strong>. L'authentification, les fonctions serveur et la collecte de plantages sont
+fournies par <strong>Firebase (Google)</strong>.</p>
+
+<h2>4. Base légale (RGPD)</h2>
+<ul>
+  <li><strong>Exécution du contrat</strong> : compte et contenu nécessaires au fonctionnement de l'app.</li>
+  <li><strong>Intérêt légitime</strong> : diagnostic des plantages pour assurer la fiabilité.</li>
+  <li><strong>Consentement</strong> : le cas échéant, pour tout traitement facultatif.</li>
+</ul>
+
+<h2>5. Sous-traitants</h2>
+<ul>
+  <li><strong>Google / Firebase</strong> — authentification, base de données (Paris), fonctions, Crashlytics.</li>
+  <li><strong>RevenueCat</strong> — gestion des droits d'accès liés aux achats.</li>
+  <li><strong>Google Play</strong> et <strong>Apple App Store</strong> — traitement des paiements.</li>
+</ul>
+<p>Chacun agit en conformité avec ses propres engagements RGPD.</p>
+
+<h2>6. Durée de conservation</h2>
+<p>Vos données sont conservées tant que votre compte est actif. À la suppression du compte ou sur demande,
+elles sont effacées dans un délai raisonnable, sauf obligation légale de conservation.</p>
+
+<h2>7. Vos droits</h2>
+<p>Conformément au RGPD, vous disposez des droits d'<strong>accès</strong>, de <strong>rectification</strong>,
+d'<strong>effacement</strong>, de <strong>portabilité</strong>, de <strong>limitation</strong> et d'<strong>opposition</strong>.</p>
+<p>Pour les exercer, écrivez à <a href="mailto:alain.bonnefond03@orange.fr">alain.bonnefond03@orange.fr</a>.
+Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong>
+(<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+
+<h2>8. Mineurs</h2>
+<p>L'application n'est pas destinée aux enfants de moins de <strong>15 ans</strong> (âge du consentement
+numérique en France). Nous ne collectons pas sciemment leurs données.</p>
+
+<h2>9. Sécurité</h2>
+<p>L'accès aux données est restreint par des règles Firestore : chaque document est rattaché à son
+propriétaire (<code>ownerUid</code>) et n'est lisible/modifiable que par lui. Les résultats de tournoi
+sont validés côté serveur (Cloud Functions).</p>
+
+<h2>10. Modifications</h2>
+<p>Cette politique peut évoluer. Toute modification importante sera signalée dans l'application
+et/ou par la mise à jour de la date ci-dessus.</p>
+
+<footer>
+  © 2026 Alain Bonnefond — Tournoi de fléchettes (<code>com.alainfr.tournoiflechettes</code>).
+  Contact : <a href="mailto:alain.bonnefond03@orange.fr">alain.bonnefond03@orange.fr</a>
+</footer>
+</div>
+</body>
+</html>
